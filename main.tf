@@ -1,4 +1,5 @@
 terraform {
+  
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -128,6 +129,7 @@ resource "aws_instance" "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
+    Department = "devops"
   }
 }
 
